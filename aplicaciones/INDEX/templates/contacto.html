@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+        
+    {% block head %}   
+        <!--SMTPJS MAIL-->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!--SWEET ALERT-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <!--MY JAVASCRIPT-->
+        <script src="{% static 'js/send-mail.js' %}"></script>
+        <!--MY CSS-->
+        <link href="{% static 'css/contacto.css' %}" rel="stylesheet">
+    {% endblock %}
+
+
+    {% block body %}           
+            <div class="mail-container">
+                <h1>Enviar email</h1>
+                <ul class="form-container">
+                    <form onsubmit="return false">
+                        <li><label>Nombre: </label><input type="text" placeholder="Nombre" id="nombre" required></li>
+                        <li><label>Ingresa tu email: </label><input type="email" placeholder="Email" id="email" required></li>
+                        <li><label>Subject: </label><input type="text" placeholder="Subject" id="subject" required></li>
+                        <li><label>Mensaje: </label><textarea rows="3" cols="10" placeholder="Mensaje" id="mensaje" required></textarea></li>
+                        <li><button type="submit" id="send-mail">Enviar</button></li>
+                    </form>
+                </ul>
+            </div>
+    {% endblock %}

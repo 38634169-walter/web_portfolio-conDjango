@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+         <!--MY CSS-->
+        <link rel="stylesheet" href="{% static 'css/mas-trabajos.css' %}">
+{% endblock %}
+
+
+{% block body %}
+            <div class="introduccion">
+                <div>
+                    <h1>Gracias por visitar esta seccion</h1>
+                    <p>
+                        Aca vas a encontrar algunos de mis trabajos. Sitios web completos, 
+                        un sistema de reserva de turnos hecho con Django. Trabajos de Cursos con 
+                        Python POO y Mysql. Entre otros tambien trabajos de la facultad a la que 
+                        asisto UTN frgp
+                    </p>
+                </div>
+            </div>
+            <div class="cuerpo">
+                <div class="webs">
+                    <h1><i class="fas fa-globe-americas"></i>Sitios Web</h1>
+                    <p>
+                        La tercera imagen lleva a una pagina web hecha en Django al hacer click sobre ella 
+                        o su boton aparecera un alert indicando los usuarios y contraseñas de los doctores 
+                        y secretarias para que puedas usar el sistema por tu cuenta. Conociimientos aplicados 
+                        del curso Full stack dictado por Polotic (Silicon Misiones).El certificado se encuentra 
+                        en la seccion info de la barra del menu principal.
+                    </p>
+                    <div>
+                        <ul>
+                            <a href="https://walter-damian-diaz.github.io/web_tarjeta_/"><img src="{% static 'imagenes/mas-trabajos/1.JPG' %}" alt=""></a>
+                            <a href="https://walter-damian-diaz.github.io/web_constructora/"><img src="{% static 'imagenes/mas-trabajos/2.JPG' %}" alt=""></a>
+                        </ul>
+                        <ul>
+                            <a href="http://walterdd.pythonanywhere.com/"><img src="{% static 'imagenes/mas-trabajos/3.JPG' %}" alt=""></a>
+                            <a href="https://walter-damian-diaz.github.io/web_ropa/"><img src="{% static 'imagenes/mas-trabajos/4.JPG' %}" alt=""></a>
+                        </ul>
+                    </div>
+                <div>
+                <hr>
+                <div class="tps-utn">
+                    <h1><i class="fas fa-university"></i>Trabajos Practicos hechos en UTN</h1>
+                    <p>
+                        Esta seccion contiene 7 trabajos practicos hechos en C++ entre todos los trabajos practicos 
+                        juntos hay un total de 90 ejercicios, cada trabajo practico contiene las consignas de todos 
+                        los ejercicios que lo forman, se encuentran en un archivo PDF dentro de la misma carpeta. 
+                        Tambien vas a poder encontrar la consigna de cada ejercicio en la misma carpeta que lo contiene
+                    </p>
+                    <div>
+                        <div>
+                            <a href=""><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°1</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%202B%20(extras)"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°2</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%203"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°3</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%204"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°4</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%205"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°5</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%206"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°6</p></a>    
+                        </div>
+                        <div>
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP7"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°7</p></a>    
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="proyecto-final-utn">
+                    <h1><i class="far fa-copy"></i>Trabajo practico de UTN juego de dados</h1>
+                    <p>
+                        Se trata de un juego de dados hecho en C++ ejercicio de 
+                        final de cuatrimestre de la UTN la consigna y el planteamiento logico que pide el juego 
+                        se encuentra en un archivo PDF dentro de la misma carpeta.
+                    </p>
+                    <a href="https://github.com/Walter-Damian-Diaz/UTN-Universidad-Tecnologica-Nacional-PROYECTO-FINAL"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""></a>
+                </div>
+                <hr>
+                <div class="python">
+                    <h1><i class="fab fa-python"></i>Ejercicios Python POO</h1>
+                    <p>
+                        Esta seccion cuenta con 7 ejercicios hechos en Python, las consignas estan 
+                        dentro de las carpetas de los archivos y tambien en la raiz de los mismos.
+                        Curso Python POO dictado por Fablab
+                    </p>
+                    <a href="https://github.com/Walter-Damian-Diaz/Python-POO"><img src="{% static 'imagenes/mas-trabajos/python.jpg' %}" alt=""></a>
+                </div>
+                <hr>
+                <div class="mysql">
+                    <h1><i class="fas fa-database"></i>Ejercicios Mysql</h1>
+                    <p>
+                        Esta seccion contiene 6 ejercicios en Mysql, curso dictado por Fablab. Las 
+                        consignas se encuentran dentro de la carpeta de los archivos los cuales son scripts 
+                        de la base de datos que pide la consigna. Tambien se encuentran tadas las consignas 
+                        juntas dentro de la misma carpeta raiz.
+                    </p>
+                    <a href="https://github.com/Walter-Damian-Diaz/Mysql"><img src="{% static 'imagenes/mas-trabajos/mysql.jpg' %}" alt=""></a>
+                </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,170 @@
+
+/*   FORMULARIO   ////////////////////////////////////////////////////////////////////*/
+
+
+.form-container{
+    width:100%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.699);
+    margin-top:13cm;
+    padding:1cm 15px;
+    padding-bottom:3cm;
+}
+.form-container>h1{
+    font-size: calc(1vw + 20px);
+    text-align:center;
+    padding:15px 50px;
+    color:white;
+    text-shadow: 2px 2px 12px white;
+    border:5px solid green;
+    border-radius:15px;
+}
+.form-container>form{
+    width:100%;
+    display:flex;
+    margin-top:1cm;
+}
+
+.form-container>form>div{
+    width:33%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+
+.form-container>form>div>label{
+    display:block;
+    font-size: calc(1vw + 9px);
+    margin-top:10px;
+    text-align: center;
+    color:white;
+}
+/* clases de inputs */
+.input1 , .input2 , .input3 , .input4{
+    height:1cm;
+    padding:10px;
+    border-radius:15px;
+}
+.input5 , .input6{
+    height:7cm;
+    width:7cm;
+    padding:10px;
+    border-radius:15px;
+}
+
+/* boton */
+
+.form-container>form>ul{
+    width:100%;
+    position: absolute;
+    right:0;
+    left:0;
+    text-align: center;
+    margin-top:9cm;
+}
+.form-container>form>ul>button{
+    color:white;
+    background:green;
+    border: 9px solid rgb(3, 218, 3);
+    border-radius: 15px;
+    width:50%;
+    margin:auto;
+    cursor:pointer;
+    font-size: calc(1vw + 14px);
+}
+
+
+
+/*   CONFIRMACION DE FORMULARIO   ////////////////////////////////////////////////////////////////////*/
+
+.recibido{
+    width:100%;
+    position:absolute;
+    top:2cm;
+    border-radius: 15px;
+    border:2px solid white;
+    box-shadow:15px 10px 15px black;
+    background:rgb(2, 168, 2);
+    padding:10px;
+    z-index: 100000;
+    color:white;
+    text-align: center;
+    font-size: calc(1vw + 11px);
+}
+.recibido>i{
+    padding:10px 10px;
+}
+.recibido>li{
+    width:100%;
+    text-align: center;
+}
+.recibido>li>button{
+    width:2cm;
+    font-size: calc(1vw + 5px);
+    color:white;
+    background:green;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 15px;
+    padding:4px;
+    cursor:pointer;
+}
+
+
+/*   INDEX CHANGES ON SECTION  ////////////////////////////////////////////////////////////////////*/
+/*   INFO-SECTION   ////////////////////////////////////////////////////////////////////*/
+
+.information-container{
+    margin-top:0cm;
+}
+
+@media all and (max-width:800px){
+    .form-container{
+        margin-top:3cm;
+    }
+    .form-container>form{
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container>form>div{
+        width:100%;
+    }
+    .form-container>form>div>label{
+        font-size: calc(1vw + 16px);
+    }
+
+    /* boton */
+    
+    .form-container>form>ul{
+        margin-top:28cm;
+    }
+}
+@media all and (max-width:400px){
+
+    .form-container{
+        margin-top:4cm;
+    }
+
+    .form-container>h1{
+        padding:15px 20px;
+    }
+
+    /* clases de inputs */
+
+    .input5 , .input6{
+        width:5cm;
+    }
+
+    /* boton */
+    
+    .form-container>form>ul{
+        margin-top:27cm;
+    }
+
+}

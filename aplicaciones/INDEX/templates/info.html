@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block head %}
+        <link rel="stylesheet" href="{% static 'css/info.css' %}">
+{% endblock  %}
+
+
+{% block body %}
+            <div class="section-container">
+                <div class="titulo-seccion">
+                    <h1>Leer</h1>
+                    <p>
+                        Faltan 2 certificados mas, uno es de Python POO 
+                        y el otro es de Mysql, ambos cursos dictados por 
+                        Fablab. Igualmente los trabajos o ejercicios de las clases 
+                        estan en mi <a href="https://github.com/Walter-Damian-Diaz">GitHub</a> y en la seccion <a href="{% url 'INICIO:mas-trabajos' %}"> Mas trabajos</a>
+                    </p>
+                </div>
+                <ul class="django">
+                    <li class="textos">
+                        <p> <strong>Certificado en:</strong> Fullstack con Django</p>
+                        <p><strong>Emitido por:</strong> Polo Tic Silicon Misiones </p>
+                    </li>
+                    <li class="imagenes">
+                        <img src="{% static 'imagenes/certificados/django.JPG' %}" alt="">
+                    </li>
+                </ul>
+                <ul class="wordpress">
+                    <li class="textos">
+                        <p><strong>Certificado en:</strong> WordPress</p>
+                        <p><strong>Emitido por:</strong> UTN (Universidad Tecnologica Nacional)</p>
+                    </li>
+                    <li class="imagenes">
+                        <img src="{% static 'imagenes/certificados/wordpress.JPG' %}" alt="">
+                    </li>
+                </ul>
+            </div>
+{% endblock  %}

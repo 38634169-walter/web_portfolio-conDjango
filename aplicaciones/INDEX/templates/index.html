@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+    
+    {% block head %}    
+        <!--MY CSS-->
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/formm.css' %}">
+        <!--MY JAVASCRIPT-->
+        <script src="{% static 'js/slider-portada.js' %}"></script>
+        <script src="{% static 'js/formulario-recibido.js' %}"></script>
+    {% endblock %}
+    
+    {% block header %}
+            
+            {% if enviado %}
+                <div class="recibido" role="alert"><i class="fas fa-clipboard-check"></i>Formulario recibido
+                    <li><button id="ok">Ok</button></li>
+                </div>
+            {% endif %}
+
+            <div class="slider-container">      <!--SLIDER-->
+                <div>
+                    <ul class="slider s1">
+                        <li>
+                            <h1>Mis conocimientos</h1>
+                            <p>
+                            -Conocimientos en HTML, CSS, JAVASCRIPT,
+                            ,BOOTSTRAP, JQUERY, PYTHON, DJANGO, C++ y WORDPRESS<br>
+                            -Estudio en UTN (Universidad Tecnologica Nacional)<br>
+                            -Cursos realizado de fullstack HTML, CSS y Javascript 
+                            con Django y SQLite.<br>
+                            -Otros 3 cursos realizados de Python POO, Mysql y Wordpress.<br>
+                            -Uso de git-hub y git-bash para proyectos.<br>
+                            -Ingles avanzado (sin problemas de tener una entrevista en ingles)
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="slider s2">
+                        <li>
+                            <h1>Mis objetivos</h1>
+                            <p>
+                                Uno de mis objetivos es llevar al maximo mis habilidades
+                                como desarrollador web mientras termino la facultad, para algun dia 
+                                dedicarme a machine learning y big-data.
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="slider s3">
+                        <li>
+                            <h1>Mis creencias</h1>
+                            <p>
+                                Esforzarme al 150% para lograr mis objetivos, 
+                                creo que todo se consigue a través del trabajo duro 
+                                con dedicacion y pasión por lo que uno hace
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flecha-slider-izquierda flechas-slider">    <!--FLECHAS-->
+                    <li><i class="fas fa-chevron-left"></i></li>
+                </div>
+                <div class="flecha-slider-derecha flechas-slider">
+                    <li><i class="fas fa-chevron-right"></i></li>
+                </div>
+                <div class="paginacion">                        <!--PAGINACION-->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </div>
+            </div>
+        </header>
+
+    {% endblock %}
+
+    {% block body %}
+        <div class="form-container">
+            <h1>Encuesta para entrevistadores</h1>     
+            <form action="{% url 'INICIO:procesar' %}" method="post">
+                {% csrf_token %}        
+                <div>
+                    {{ form.nombre.label_tag }}
+                    {{ form.nombre }}
+                    
+                    {{ form.apellido.label_tag }}
+                    {{ form.apellido }}
+                    
+                    {{ form.empresa.label_tag }}
+                    {{ form.empresa }}
+                    
+                    {{ form.fecha.label_tag }}
+                    {{ form.fecha }}
+                </div>
+                <div>
+                    {{ form.opinion.label_tag }}
+                    {{ form.opinion }}
+                </div>
+                <div>
+                    <label for="Puntos a mejorar">Puntos a mejorar:</label>
+                    {{ form.mejorar }}
+                </div> 
+                <ul>
+                    <button type="submit" id="form-btn">Enviar</button>
+                </ul>
+            </form>
+        </div>
+        <div class="information-container" id="info">           <!--INFO-->
+            <div class="first-line">
+                <ul class="presentation-text text1">
+                    <h1>Acerca de Mi</h1>
+                    <p>
+                        Mi nombre es Walter, tengo 26 años, nacido en Argentina,
+                        soy de Buenos Aires vivo en General Pacheco una ciudad de
+                        Zona Norte en Tigre. Mis estudios y experiencias se encuentran
+                        detalladas por debajo. Me 
+                        gustaria tener la oportunidad de formar parte de su equipo de trabajo,
+                        debido a que seria mi primer experiencia y que coincidero que mis conocimientos
+                        son lo suficiente como para formar parte de un equipo, es por eso que envio
+                        mi curriculum, me gustaria pedirle humildemente que forme parte de mi encuesta
+                        acerca de que piensa sobre mi y mis trabajos para ayudarme a mejorar o 
+                        tener en cuenta ciertos aspectos que pueden enriqueserme aun mas como
+                        desarrollador, desde ya muchas gracias.
+                    </p>
+                </ul>
+                <ul class="presentation-img img1">
+                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_constructora/"><img src="{% static 'imagenes/index/2.JPG' %}" alt=""></a></li>
+                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_constructora/"><i class="fas fa-plus"></i>Ver pagina</a></li>
+                </ul>
+            </div>
+            <div class="second-line">
+                <ul class="presentation-text text2" id="second-text">
+                    <h1>Estudios y experencias</h1>
+                    <p>
+                        Actualmente estudio programacion en UTN (Universidad Tecnologica Nacional)
+                        estoy en mi primer año como programador con 5 materias ya aprobadas de el 
+                       primer cuatrimestre con promedios de 9 y 10 en todas las materias, en la 
+                        facultad hasta el momento usamos C++ como lenguaje, en el cual desarrolle 
+                        diferentes tipos de logicas y tambien juegos.
+                        Mi dedicacion por aprender me llevaron a meterme en un curso de fullstack
+                        con Django, Javascript, Bootstrap, SQLite, CSS Y HTML dictado por Polotic 
+                        (Silicon Misiones),de hecho esta pagina la monte en Django con Sqlite para 
+                        poder guardar la encuesta en una base de datos. 
+                        Tambien realize cursos en Fablab de Python POO y Mysql. Por otra parte tambien 
+                        hice un curso de WordPress en mi facultad UTN. Aunque mi experiencia laboral
+                        es nula hasta el momento, me gustaria emprender en este camino en el cual coincidero 
+                        soy muy dedicado y autodidacta. Tambien entiendo Ingles y puedo hablarlo, sin problemas 
+                        de tener una entrevista personal y completamente en ingles.
+                    </p>
+                </ul>
+                <ul class="presentation-img img2">
+                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_ropa/"><img src="{% static 'imagenes/index/4.JPG' %}" alt=""></a></li>
+                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_ropa/" ><i class="fas fa-plus"></i>  Ver pagina</a></li>
+                </ul>
+            </div>            
+        </div>
+    {% endblock %}

@@ -1,0 +1,248 @@
+hr{
+    width:50%;
+    margin-top:1cm;
+}
+
+
+/*   INTRODUCCION   //////////////////////////////////////////////*/
+
+.introduccion{
+    width:90%;
+    margin:auto;
+    margin-top:12cm;
+    position:relative;
+    border:2px solid white;
+    background: linear-gradient(20deg, white 5% , rgba(2, 2, 124, 0.671) 30% 50%, transparent 70% 100%),url(../imagenes/mas-trabajos/wallpaper.jpg);
+    border-radius:35px;
+    box-shadow: 15px 10px 15px black;
+    z-index:2;
+}
+.introduccion>div{
+    height:100%;
+    padding:1cm 20px;
+    background:rgba(0, 0, 0, 0.534);
+    border-radius:35px;
+}
+
+.introduccion>div>h1{
+    font-size: calc(1vw + 15px);   
+    text-align:center;
+    padding:0px 10px;
+    color:white;
+    text-shadow:2px 2px 12px rgb(255, 255, 255);
+}
+.introduccion>div>p{
+    font-size: calc(1vw + 12px);   
+    text-align:center;
+    padding:0px 10px;
+    padding-top:10px;
+    color: white;
+}
+
+/*   CUERPO   ///////////////////////////////////////////////*/
+
+.cuerpo{    
+    margin-top:-3cm;
+    padding-top:3cm;
+    padding-bottom:5cm;
+    margin-bottom:-3.3cm;
+    background:rgba(2, 2, 119, 0.849);
+    border-top:2px solid white;
+}
+
+
+/* todos */
+.webs , .tps-utn , .proyecto-final-utn , .python , .mysql{
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+.webs>h1 , .tps-utn>h1 , .proyecto-final-utn>h1 , .python>h1 , .mysql>h1{
+    font-size:calc(1vw + 29px);
+    margin:0.5cm 0px;
+    margin-top:2cm;
+    text-align:center;
+    text-shadow: 2px 2px 12px white;
+}
+.webs>h1>i , .tps-utn>h1>i , .proyecto-final-utn>h1>i , .python>h1>i , .mysql>h1>i{
+    font-size: calc(1vw + 60px);
+    padding-right:10px;
+    color:aquamarine;
+}
+.webs>p , .tps-utn>p , .proyecto-final-utn>p , .python>p , .mysql >p{
+    font-size:calc(1vw + 15px);
+    margin:0.5cm 0px;
+    padding:20px;
+    color:white;
+}
+
+/* WEBS */
+/* paginas-imagenes */
+
+.webs>div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.webs>div>ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webs>div>ul>a{
+    width:50%;
+    height:auto;
+    border-radius: 35px;
+    overflow:hidden;
+}
+.webs>div>ul>a>img{
+    width:100%;
+    height:100%;
+    padding:10px;
+    border-radius: 35px;
+    transition:all 1s;
+}
+.webs>div>ul>a>img:hover{
+    transform: scale(1.2);
+}
+
+/* TPS UTN */
+
+.tps-utn>div{
+    display:flex;
+    flex-wrap: wrap;
+}
+.tps-utn>div{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.tps-utn>div div{
+    margin:5px;
+    background:rgba(255, 255, 255, 0.719);
+    border-radius:15px;
+    transition:all 1s;
+}
+.tps-utn>div div:hover{
+    transform:scale(1.2);
+    background:rgb(255, 255, 255);
+}
+.tps-utn>div div>a{
+    display:block;
+    text-decoration: none;
+    padding:20px;
+}
+.tps-utn>div div>a>img{
+    width:4cm;
+    height:auto;
+}
+.tps-utn>div div>a>p{
+    text-shadow: 2px 2px 12px black;
+    color:white;
+}
+.tps-utn>div div:hover a>p{
+    color:black;
+}
+
+/* PROYECTO UTN */
+
+.proyecto-final-utn>a{
+    margin:auto;
+    display:block;
+    background:white;
+    border-radius:15px;
+    border:2px solid white;
+    overflow:hidden;
+}
+
+.proyecto-final-utn>a>img{
+    width:30%;
+    height:auto;
+    transition:all 1s;
+}
+.proyecto-final-utn>a>img:hover{
+    transform: scale(1.8);
+}
+
+/* PYTHON */
+
+.python>a>img{
+    width:8cm;
+    height:auto;
+    border-radius:100%;
+    transition:all 1s;
+}
+.python>a>img:hover{
+    box-shadow:15px 10px 15px black;
+    transform:scale(1.2)
+}
+
+/* MYSQL */
+
+.mysql>a>img{
+    width:8cm;
+    height:auto;
+    border:1px solid white;
+    border-radius:15px;
+    transition:all 1s;
+}
+.mysql>a>img:hover{
+    transform:scale(1.2);
+    border:none;
+    box-shadow:0px 0px 85px white;
+}
+
+
+@media all and (max-width:800px){
+
+    /*   INTRODUCCION   //////////////////////////////////////////////*/
+
+    .introduccion{
+        margin-top:2.5cm;
+    }
+    .introduccion>div{
+        padding:20px;
+    }
+    /*   CUERPO   ///////////////////////////////////////////////*/
+
+    .cuerpo{    
+        padding-bottom:4cm;
+        margin-bottom:-2cm;
+        padding-top:2cm;
+        margin-top:-2cm;
+    }
+
+    /* WEBS */
+    /* paginas-imagenes */
+
+    .webs>div>ul{
+        flex-direction:column;
+    }
+    .webs>div>ul>a{
+        width:90%;
+    }
+}
+
+@media all and (max-width:400px){
+
+    /* PYTHON */
+
+    .python>a>img{
+        width:4cm;
+    }
+    .mysql>a>img{
+        width:4cm;
+    }
+    
+    
+    /* TPS UTN */
+
+    .tps-utn>div div>a{
+        padding:10px;
+    }
+    .tps-utn>div div>a>img{
+        width:3cm;
+    }
+}
