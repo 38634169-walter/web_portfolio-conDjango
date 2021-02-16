@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--ICON-AWSOME-->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+         <!--jQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <!--MY JAVASCRIPT-->
+         <script src="{% static 'js/menu-responsive.js' %}"></script>
+         <script src="{% static 'js/nube-de-dialogo.js' %}"></script>
+         <!--MY CSS-->
+        <link href="{% static 'css/header.css' %}" rel="stylesheet">
+        <link href="{% static 'css/footerr.css' %}" rel="stylesheet">
+        {% block head %}
+        
+
+
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="menu-responsive">
+                <h1>Menu</h1><i class="fas fa-align-justify iconoMenu"></i><i class="fas fa-times xMenu"></i>
+            </div>
+            <nav class="menu-principal">             <!--MENU PRINCIPAL-->
+                <ul class="nom">
+                    <h1>Walter Damian Diaz</h1>
+                </ul>
+                <ul class="menu">
+                    <li><a href="{% url 'INICIO:inicio' %}">Inicio</a></li>
+                    <li id="liToggle">
+                        <div>
+                            <a href="#" class="sin-menu"><i class="fas fa-suitcase"></i>Mas trabajos</a>
+                            <i class="fas fa-chevron-down flechaAbajo flechas"></i>
+                            <i class="fas fa-chevron-right flechaDerecha flechas"></i>
+                        </div>
+                        <ul class="sub-menu1">                               <!--SUB-MENU-->
+                            <li><a href="{% url 'INICIO:mas-trabajos' %}">Mas trabajos</a></li>
+                            <li><a href="#">vacio</a></li>
+                            <li><a href="#">vacio</a></li>
+                            <li><a href="#">vacio</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="{% url 'INICIO:info' %}" class="sin-menu"><i class="fas fa-info-circle"></i>Info</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#ubicacion" class="sin-menu"><i class="fas fa-map-marker-alt"></i>Ubicacion</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="{% url 'INICIO:contacto' %}" class="sin-menu"><i class="fas fa-envelope-open-text"></i>Contacto</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="fondo-container">         <!--FONDO-->
+                <ul class="fondo-izquierdo">
+                    <img src="{% static 'imagenes/logo/esta2.png' %}" alt="">
+                    <p class="texto-dialogo">Soy walter</p>
+                </ul>
+                <ul class="fondo-derecho">
+                    <div>
+                        <h1>Hola</h1>
+                        <p>
+                            Mi nombre es walter, soy de Buenos Aires(Argentina).
+                            Este es mi curriculum, debajo se encuentra mi informacion
+                            academica, y algunos proyectos, hay mas en la seccion 
+                            "mas trabajos", tambien se me ocurrio que seria buena idea 
+                            implementar una base de datos para guardar una encuesta 
+                            que esta diriguida hacia los entrevistadores, esta pagina 
+                            la monte en Django con Sqlite .Me seria de gran ayuda que 
+                            completes la encuesta de como calificarias mi desempeño 
+                            como programador, agradezco tu tiempo. Saludos
+                        </p>
+                        <div class="iconos-boton">                     <!--ICONOS PORTADA-->
+                            <div class="iconos">
+                                <a href="https://github.com/Walter-Damian-Diaz?tab=repositories" target="blank"><i class="fab fa-github"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=541161023944" target="blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="{% url 'INICIO:contacto' %}"><i class="fas fa-envelope-open-text"></i></a>
+                            </div>                
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            {% block header %}
+
+
+            {% endblock %}
+
+        </header>
+        <section>
+
+            {% block body %}
+
+
+
+            {% endblock %}
+        </section>
+        <footer>
+            <div class="mis-trabajos">             <!--MIS TRABAJOS-->
+                <h1>Click en el boton para ver mas trabajos</h1>
+                <a href="{% url 'INICIO:mas-trabajos' %}">Ver</a>
+            </div>
+            <div class="ubicacion" id="ubicacion">      <!--MAPA-->
+                <h1><i class="fas fa-map-marker-alt"></i>  Ubicacion</h1>
+                <p>Lugar donde recido actualmente</p>
+                <li id="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52639.90161180773!2d-58.69309449800724!3d-34.45230398041936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca39ca574d823%3A0xd4fb0a11188d493e!2sGral.%20Pacheco%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1610923020988!5m2!1ses-419!2sar"  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></li>
+            </div>            
+            <div class="footer-container">
+                <ul class="logo-footer">
+                    <li><img src="{% static 'imagenes/logo/esta2.png' %}" alt=""></li>
+                </ul>
+                <ul class="about-footer">
+                    <p>Mail: walter.diaz@alumnos.frgp.utn.edu.ar</p>
+                    <p>Localidad: Tigre(Gral.Pacheco)</p>
+                    <p>Direccion: Tucuman 288</p>
+                    <p>Tel: 1161023944</p>
+                </ul>
+                <ul class="info-footer">
+                    <li><a href="{% url 'INICIO:mas-trabajos' %}">Mas trabajos</a></li>
+                    <li><a href="{% url 'INICIO:info' %}">Info</a></li>
+                    <li><a href="#ubicacion">Ubicacion</a></li>
+                    <li><a href="{% url 'INICIO:contacto' %}">Contacto</a></li>
+                </ul>
+                <ul class="iconos iconos-footer">                 <!--ICONOS FOOTER-->
+                    <a href="https://github.com/Walter-Damian-Diaz?tab=repositories" target="blank"><i class="fab fa-github"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=541161023944" target="blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="{% url 'INICIO:contacto' %}"><i class="fas fa-envelope-open-text"></i></a>
+                </ul>
+            </div>
+            <div class="text-bottom">
+                <h1>Gracias por visitar mi pagina, espero sea de tu agrado</h1>
+            </div>            
+            {% block footer %}
+
+
+            {% endblock %}
+        </footer>
+    </body>
+</html>
