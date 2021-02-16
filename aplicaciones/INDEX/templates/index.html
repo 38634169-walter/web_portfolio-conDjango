@@ -75,7 +75,7 @@
     {% endblock %}
 
     {% block body %}
-        <div class="form-container">
+        <div class="form-container" id="encuesta">
             <h1>Encuesta para entrevistadores</h1>     
             <form action="{% url 'INICIO:procesar' %}" method="post">
                 {% csrf_token %}        
@@ -124,8 +124,8 @@
                     </p>
                 </ul>
                 <ul class="presentation-img img1">
-                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_constructora/"><img src="{% static 'imagenes/index/2.JPG' %}" alt=""></a></li>
-                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_constructora/"><i class="fas fa-plus"></i>Ver pagina</a></li>
+                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><img src="{% static 'imagenes/index/2.JPG' %}" alt=""></a></li>
+                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><i class="fas fa-plus"></i>Ver pagina</a></li>
                 </ul>
             </div>
             <div class="second-line">
@@ -149,8 +149,8 @@
                     </p>
                 </ul>
                 <ul class="presentation-img img2">
-                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_ropa/"><img src="{% static 'imagenes/index/4.JPG' %}" alt=""></a></li>
-                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_ropa/" ><i class="fas fa-plus"></i>  Ver pagina</a></li>
+                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><img src="{% static 'imagenes/index/4.JPG' %}" alt=""></a></li>
+                    <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><i class="fas fa-plus"></i>  Ver pagina</a></li>
                 </ul>
             </div>            
         </div>
