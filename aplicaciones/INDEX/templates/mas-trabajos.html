@@ -4,6 +4,11 @@
 {% block head %}
          <!--MY CSS-->
         <link rel="stylesheet" href="{% static 'css/mas-trabajos.css' %}">
+        <!--MY JAVASCRIPT-->
+        <script src="{% static 'js/paginaDjango.js' %}" ></script>
+        <!--SWEET ALERT-->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 {% endblock %}
 
 
@@ -35,7 +40,7 @@
                             <a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><img src="{% static 'imagenes/mas-trabajos/2.JPG' %}" alt=""></a>
                         </ul>
                         <ul>
-                            <a href="http://walterdd.pythonanywhere.com/" target="blank"><img src="{% static 'imagenes/mas-trabajos/3.JPG' %}" alt=""></a>
+                            <a href="#" target="blank" onclick="djangoPage()"><img src="{% static 'imagenes/mas-trabajos/3.JPG' %}" alt=""></a>
                             <a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><img src="{% static 'imagenes/mas-trabajos/4.JPG' %}" alt=""></a>
                         </ul>
                     </div>
