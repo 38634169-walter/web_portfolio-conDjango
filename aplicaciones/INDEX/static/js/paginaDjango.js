@@ -1,7 +1,7 @@
 function djangoPage(){
     Swal.fire({
         title: 'LEER',
-        html: '<div style="background:red;padding:5px;border-radius:15px;border:2px solid black;box-shadow:10px 10px 15px black;margin-bottom:30px;"><strong style="color:black;text-shadow:2px 2px 12px white">USUARIOS:</strong> <p style="color:white">Secretaria-Romina</p> <p style="color:white;">Doctor-Raul</p> <p style="color:white;">Doctora-Sofia</p></div> <strong style="color:green">CONTRASEÑA:</strong>wally 1234',
+        html: '<div style="background:rgb(219, 219, 1);padding:5px;border-radius:15px;border:2px solid black;box-shadow:10px 10px 15px black;margin-bottom:30px;"><strong style="color:black;text-shadow:2px 2px 12px white">USUARIOS:</strong> <p style="color:white">Secretaria-Romina</p> <p style="color:white;">Doctor-Raul</p> <p style="color:white;">Doctora-Sofia</p></div> <strong style="color:green">CONTRASEÑA:</strong>wally 1234',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
