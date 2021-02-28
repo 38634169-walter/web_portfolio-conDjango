@@ -98,13 +98,16 @@ hr{
     height:auto;
     border-radius: 35px;
     overflow:hidden;
+    display:block;
 }
+
 .webs>div>ul>a>img{
     width:100%;
     height:100%;
     padding:10px;
     border-radius: 35px;
     transition:all 1s;
+    opacity: 0;
 }
 .webs>div>ul>a>img:hover{
     transform: scale(1.2);

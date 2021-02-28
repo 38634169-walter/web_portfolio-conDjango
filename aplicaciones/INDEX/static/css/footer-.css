@@ -124,8 +124,9 @@ footer{
     width:20%;
 }
 .logo-footer>li{
-    width:5cm;
+    width:7cm;
     height:7.5cm;
+    margin-left:-20px;
 }
 .logo-footer>li>img{
     width:100%;
@@ -214,7 +215,7 @@ footer{
     
     /* logo */
     .logo-footer{
-        width:4.5cm;
+        width:6cm;
         height:6.5cm;
         margin:auto;
         position:relative;
@@ -224,6 +225,7 @@ footer{
         width:100%;
         height:100%;
         margin:0;
+        margin-left:0px;
         padding:0;
         display:block;
         position:relative;
