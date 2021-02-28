@@ -131,7 +131,7 @@ li{
     margin-top:-0.75cm;
 }
 .flechaDerecha{
-    display:none;
+    display: none !important;
 }
 .flechaAbajo{
     display: block;
@@ -163,8 +163,6 @@ li{
 }
 
 /*   FONDO   ////////////////////////////////////////////////////////////////////*/
-
-
 
 .fondo-container{
     top:3cm;

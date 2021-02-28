@@ -1,56 +1,55 @@
 $(document).ready(mostrar_menu);
 
+let num=0;
 let num2 = 1;
 
 function mostrar_menu(){
 
-    /* icono hamburguesa */ 
 
-    $('.iconoMenu').click(function(){
-        $('.menu-principal').animate({
-            top:'59px'
-        });
-        $('.iconoMenu').toggleClass("remove");
-        $('.xMenu').toggleClass("show");
-    });
+    $('.iconoMenu').click(mostrar);
 
-    /* icono x */ 
-
-    $('.xMenu').click(function(){
-        
-        $('.menu-principal').animate({
-            top:'-190%'
-        });
-
-        $('.xMenu').toggleClass('show');
-        $('.iconoMenu').toggleClass('remove');
-
-        /* ocultar submenu y volver flechas */ 
-        if(num2 == 0){
-            $('.sub-menu1').slideToggle();
-
-            $('.flechaAbajo').css("display","block");
-            $('.flechaDerecha').css("display","none");
-            num2=1;
-        }
-    });    
-
+    $('.xMenu').click(ocultar);
+    $('section').click(ocultar);
+    $('footer').click(ocultar);
 
     /* sub menu */
 
-    $('#liToggle').click(function(){
-        $(this).children('.sub-menu1').slideToggle();
+    $('#liToggle').click(sub_menu);
+}
 
-        if(num2 == 1){
-            $('.flechaAbajo').css("display","none");
-            $('.flechaDerecha').css("display","block");
-            num2=0;
-        }
-        else{
-            $('.flechaAbajo').css("display","block");
-            $('.flechaDerecha').css("display","none");
-            num2=1;
-        }
+function mostrar(){
+    $('.menu-principal').css({'top':'59px','transition':'all 1s'});
+    $('.xMenu').css({'display':'block'});
+    $('.iconoMenu').css({'display':'none'});
+}
 
-    });
+function ocultar(){
+    $('.menu-principal').css({'top':'-190%'});
+    
+    $('.xMenu').css({'display':'none'});
+    $('.iconoMenu').css({'display':'block'});
+
+    /* ocultar submenu y volver flechas */ 
+    if(num2 == 0){
+        $('.sub-menu1').slideToggle();
+
+        $('.flechaAbajo').css("display","block");
+        $('.flechaDerecha').css("display","none");
+        num2=1;
+    }
+}
+
+function sub_menu(){
+    $(this).children('.sub-menu1').slideToggle();
+
+    if(num2 == 1){
+        $('.flechaAbajo').css("display","none");
+        $('.flechaDerecha').css("display","block");
+        num2=0;
+    }
+    else{
+        $('.flechaAbajo').css("display","block");
+        $('.flechaDerecha').css("display","none");
+        num2=1;
+    }
 }

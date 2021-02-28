@@ -10,70 +10,65 @@
         <script src="{% static 'js/slider-portada.js' %}"></script>
         <script src="{% static 'js/formulario-recibido.js' %}"></script>
     {% endblock %}
-    
-    {% block header %}
 
-            {% if enviado %}
-                <div class="recibido" role="alert"><i class="fas fa-clipboard-check"></i>Formulario recibido
-                    <li><button id="ok">Ok</button></li>
-                </div>
-            {% endif %}
-
-            <div class="slider-container">      <!--SLIDER-->
-                <div>
-                    <ul class="slider s1">
-                        <li>
-                            <h1>Mis conocimientos</h1>
-                            <p>
-                            -Conocimientos en HTML, CSS, JAVASCRIPT,
-                            ,BOOTSTRAP, JQUERY, PYTHON, DJANGO, C++ y WORDPRESS<br>
-                            -Estudio en UTN (Universidad Tecnologica Nacional)<br>
-                            -Cursos realizado de fullstack HTML, CSS y Javascript 
-                            con Django y SQLite.<br>
-                            -Otros 3 cursos realizados de Python POO, Mysql y Wordpress.<br>
-                            -Uso de git-hub y git-bash para proyectos.<br>
-                            -Ingles avanzado (sin problemas de tener una entrevista en ingles)
-                            </p>
-                        </li>
-                    </ul>
-                    <ul class="slider s2">
-                        <li>
-                            <h1>Mis objetivos</h1>
-                            <p>
-                                Uno de mis objetivos es llevar al maximo mis habilidades
-                                como desarrollador web mientras termino la facultad, para algun dia 
-                                dedicarme a machine learning y big-data.
-                            </p>
-                        </li>
-                    </ul>
-                    <ul class="slider s3">
-                        <li>
-                            <h1>Mis creencias</h1>
-                            <p>
-                                Esforzarme al 150% para lograr mis objetivos, 
-                                creo que todo se consigue a través del trabajo duro 
-                                con dedicacion y pasión por lo que uno hace
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flecha-slider-izquierda flechas-slider">    <!--FLECHAS-->
-                    <li><i class="fas fa-chevron-left"></i></li>
-                </div>
-                <div class="flecha-slider-derecha flechas-slider">
-                    <li><i class="fas fa-chevron-right"></i></li>
-                </div>
-                <div class="paginacion">                        <!--PAGINACION-->
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </div>
-            </div>
-        </header>
-
-    {% endblock %}
 
     {% block body %}
+        {% if enviado %}
+            <div class="recibido" role="alert"><i class="fas fa-clipboard-check"></i>Formulario recibido
+                <li><button id="ok">Ok</button></li>
+            </div>
+        {% endif %}
+        
+        <div class="slider-container">      <!--SLIDER-->
+            <div>
+                <ul class="slider s1">
+                    <li>
+                        <h1>Mis conocimientos</h1>
+                        <p>
+                        -Conocimientos en HTML, CSS, JAVASCRIPT,
+                        ,BOOTSTRAP, JQUERY, PYTHON, DJANGO, C++ y WORDPRESS<br>
+                        -Estudio en UTN (Universidad Tecnologica Nacional)<br>
+                        -Cursos realizado de fullstack HTML, CSS y Javascript 
+                        con Django y SQLite.<br>
+                        -Otros 3 cursos realizados de Python POO, Mysql y Wordpress.<br>
+                        -Uso de git-hub y git-bash para proyectos.<br>
+                        -Ingles avanzado (sin problemas de tener una entrevista en ingles)
+                        </p>
+                    </li>
+                </ul>
+                <ul class="slider s2">
+                    <li>
+                        <h1>Mis objetivos</h1>
+                        <p>
+                            Uno de mis objetivos es llevar al maximo mis habilidades
+                            como desarrollador web mientras termino la facultad, para algun dia 
+                            dedicarme a machine learning y big-data.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="slider s3">
+                    <li>
+                        <h1>Mis creencias</h1>
+                        <p>
+                            Esforzarme al 150% para lograr mis objetivos, 
+                            creo que todo se consigue a través del trabajo duro 
+                            con dedicacion y pasión por lo que uno hace
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="flecha-slider-izquierda flechas-slider">    <!--FLECHAS-->
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="flecha-slider-derecha flechas-slider">
+                <li><i class="fas fa-chevron-right"></i></li>
+            </div>
+            <div class="paginacion">                        <!--PAGINACION-->
+                <li></li>
+                <li></li>
+                <li></li>
+            </div>
+        </div>
         <div class="form-container" id="encuesta">
             <h1>Encuesta para entrevistadores</h1>     
             <form action="{% url 'INICIO:procesar' %}" method="post">

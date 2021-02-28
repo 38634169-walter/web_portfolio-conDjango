@@ -14,7 +14,7 @@
          <script src="{% static 'js/nube-de-dialogo.js' %}"></script>
          <!--MY CSS-->
         <link href="{% static 'css/header.css' %}" rel="stylesheet">
-        <link href="{% static 'css/footerr.css' %}" rel="stylesheet">
+        <link href="{% static 'css/footer.css' %}" rel="stylesheet">
         {% block head %}
         
 
@@ -39,7 +39,7 @@
                             <i class="fas fa-chevron-right flechaDerecha flechas"></i>
                         </div>
                         <ul class="sub-menu1">                               <!--SUB-MENU-->
-                            <li><a href="{% url 'INICIO:mas-trabajos' %}">Mas trabajos</a></li>
+                            <li><a href="{% url 'INICIO:mas-trabajos' %}">Ver trabajos</a></li>
                             <li><a href="#">vacio</a></li>
                             <li><a href="#">vacio</a></li>
                             <li><a href="#">vacio</a></li>
@@ -52,7 +52,7 @@
                     </li>
                     <li>
                         <div>
-                            <a href="#ubicacion" class="sin-menu"><i class="fas fa-map-marker-alt"></i>Ubicacion</a>
+                            <a href="#ubicacion" class="sin-menu ubicacion-btn"><i class="fas fa-map-marker-alt"></i>Ubicacion</a>
                         </div>
                     </li>
                     <li>
@@ -62,6 +62,14 @@
                     </li>
                 </ul>
             </nav>
+            
+            {% block header %}
+
+
+            {% endblock %}
+
+        </header>
+        <section>
             <div class="fondo-container">         <!--FONDO-->
                 <ul class="fondo-izquierdo">
                     <img src="{% static 'imagenes/logo/esta2.png' %}" alt="">
@@ -91,19 +99,13 @@
                     </div>
                 </ul>
             </div>
-            {% block header %}
-
-
-            {% endblock %}
-
-        </header>
-        <section>
 
             {% block body %}
 
 
 
             {% endblock %}
+            
         </section>
         <footer>
             <div class="mis-trabajos">             <!--MIS TRABAJOS-->
