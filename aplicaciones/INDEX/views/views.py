@@ -4,12 +4,12 @@ from aplicaciones.INDEX.forms import FormularioEntrevistador
 
 
 class Index(HttpRequest):
-    def enviar_formulario(self,request):
+    def enviar_formulario(request):
         return render(request,"index.html",{
             'form': FormularioEntrevistador()
         })
 
-    def procesar_formulario(self,request):
+    def procesar_formulario(request):
         formulario = FormularioEntrevistador(request.POST)
         if formulario.is_valid():
             formulario.save()
