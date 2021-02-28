@@ -4,7 +4,7 @@
     
     {% block head %}    
         <!--MY CSS-->
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/inde.css' %}">
         <link rel="stylesheet" href="{% static 'css/formm.css' %}">
         <!--MY JAVASCRIPT-->
         <script src="{% static 'js/slider-portada.js' %}"></script>
@@ -101,7 +101,7 @@
         </div>
         <div class="information-container" id="info">           <!--INFO-->
             <div class="first-line">
-                <ul class="presentation-text text1">
+                <ul class="presentation-text text1 animacion2">             <!-------- animacion 1 -------->
                     <h1>Acerca de Mi</h1>
                     <p>
                         Mi nombre es Walter, tengo 26 años, nacido en Argentina,
@@ -117,13 +117,13 @@
                         desarrollador, desde ya muchas gracias.
                     </p>
                 </ul>
-                <ul class="presentation-img img1">
-                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><img src="{% static 'imagenes/index/2.JPG' %}" alt=""></a></li>
+                <ul class="presentation-img img1 animacion1">                              <!-------- animacion 2 -------->
+                    <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_construccion/" target="blank"><img src="{% static 'imagenes/index/6.JPG' %}" alt=""></a></li>
                     <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><i class="fas fa-plus"></i>Ver pagina</a></li>
                 </ul>
             </div>
             <div class="second-line">
-                <ul class="presentation-text text2" id="second-text">
+                <ul class="presentation-text text2 animacion3" id="second-text">        <!-------- animacion 1 -------->
                     <h1>Estudios y experencias</h1>
                     <p>
                         Actualmente estudio programacion en UTN (Universidad Tecnologica Nacional)
@@ -142,10 +142,11 @@
                         de tener una entrevista personal y completamente en ingles.
                     </p>
                 </ul>
-                <ul class="presentation-img img2">
+                <ul class="presentation-img img2 animacion4">                                 <!-------- animacion 2 -------->
                     <li class="imagen-pagina"><a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><img src="{% static 'imagenes/index/4.JPG' %}" alt=""></a></li>
                     <li class="button-img"><a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><i class="fas fa-plus"></i>  Ver pagina</a></li>
                 </ul>
             </div>            
         </div>
+        <script src="{% static 'js/animaciones.js' %}"></script>
     {% endblock %}

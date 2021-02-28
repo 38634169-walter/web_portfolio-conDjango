@@ -3,7 +3,7 @@
 
 {% block head %}
          <!--MY CSS-->
-        <link rel="stylesheet" href="{% static 'css/mas-trabajos.css' %}">
+        <link rel="stylesheet" href="{% static 'css/mas-trabaj.css' %}">
         <!--MY JAVASCRIPT-->
         <script src="{% static 'js/paginaDjango.js' %}" ></script>
         <!--SWEET ALERT-->
@@ -40,12 +40,15 @@
                     </p>
                     <div>
                         <ul>
-                            <a href="https://walter-damian-diaz.github.io/web_tarjeta_/" target="blank"><img src="{% static 'imagenes/mas-trabajos/1.JPG' %}" alt=""></a>
-                            <a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank"><img src="{% static 'imagenes/mas-trabajos/2.JPG' %}" alt=""></a>
+                            <a href="https://walter-damian-diaz.github.io/web_tarjeta_/" target="blank" class="animacion1"><img src="{% static 'imagenes/mas-trabajos/1.JPG' %}" alt=""></a>
+                            <a href="https://walter-damian-diaz.github.io/web_constructora/" target="blank" class="animacion2"><img src="{% static 'imagenes/mas-trabajos/2.JPG' %}" alt=""></a>
                         </ul>
                         <ul>
-                            <a target="blank" onclick="djangoPage()" style="cursor:pointer;"><img src="{% static 'imagenes/mas-trabajos/3.JPG' %}" alt=""></a>
-                            <a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank"><img src="{% static 'imagenes/mas-trabajos/4.JPG' %}" alt=""></a>
+                            <a target="blank" onclick="djangoPage()" style="cursor:pointer;" class="animacion3"><img src="{% static 'imagenes/mas-trabajos/3.JPG' %}" alt=""></a>
+                            <a href="https://walter-damian-diaz.github.io/web_ropa/" target="blank" class="animacion4"><img src="{% static 'imagenes/mas-trabajos/4.JPG' %}" alt=""></a>
+                        </ul>
+                        <ul>
+                            <a href="https://walter-damian-diaz.github.io/web_construccion/" target="blank" class="animacion2" ><img src="{% static 'imagenes/mas-trabajos/5.JPG' %}" alt=""></a>
                         </ul>
                     </div>
                 <div>
@@ -58,21 +61,21 @@
                         los ejercicios que lo forman, se encuentran en un archivo PDF dentro de la misma carpeta. 
                         Tambien vas a poder encontrar la consigna de cada ejercicio en la misma carpeta que lo contiene
                     </p>
-                    <div>
+                    <div class="animacion3">
                         <div>
-                            <a href="" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°1</p></a>    
+                            <a href="" target="blank" ><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°1</p></a>    
                         </div>
                         <div>
-                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%202B%20(extras)" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°2</p></a>    
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%202B%20(extras)" target="blank" ><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°2</p></a>    
                         </div>
                         <div>
-                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%203" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°3</p></a>    
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%203" target="blank" ><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°3</p></a>    
                         </div>
                         <div>
-                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%204" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°4</p></a>    
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%204" target="blank" ><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°4</p></a>    
                         </div>
                         <div>
-                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%205" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°5</p></a>    
+                            <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%205" target="blank" ><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°5</p></a>    
                         </div>
                         <div>
                             <a href="https://github.com/Walter-Damian-Diaz/UTN/tree/master/TP%206" target="blank"><img src="{% static 'imagenes/mas-trabajos/utn.png' %}" alt=""><p>Trabajo Practico N°6</p></a>    
@@ -114,4 +117,5 @@
                     <a href="https://github.com/Walter-Damian-Diaz/Mysql" target="blank"><img src="{% static 'imagenes/mas-trabajos/mysql.jpg' %}" alt=""></a>
                 </div>
             </div>
+            <script src="{% static 'js/animaciones.js' %}"></script>
 {% endblock %}

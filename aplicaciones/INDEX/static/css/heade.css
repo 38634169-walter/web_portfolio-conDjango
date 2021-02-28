@@ -3,12 +3,12 @@
     padding:0;
     box-sizing: border-box;
 }
+body{
+    z-index: 3;
+}
 section{
     z-index:1000;
     position:relative;
-}
-body{
-    z-index: 3;
 }
 li{
     list-style: none;
@@ -131,10 +131,10 @@ li{
     margin-top:-0.75cm;
 }
 .flechaDerecha{
-    display: none !important;
+    visibility: hidden;
 }
 .flechaAbajo{
-    display: block;
+    visibility: hidden;
 }
 
 
@@ -198,7 +198,7 @@ li{
 /* logo de dialogo */
 
 
-.texto-dialogo{
+.dialogo{
     position:absolute;
     top:-5cm;
     right:-1cm;
@@ -305,6 +305,61 @@ li{
 }
 
 
+/* ANIMACIONES AGREGADAS */
+
+.add1{
+    animation:fromTop 3s;
+}
+
+@keyframes fromTop{
+    
+    0%{
+        transform:translateY(-190px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.add2{
+    animation:fromRight 3s;
+}
+
+@keyframes fromRight{
+    0%{
+        transform:translateX(190px);
+    }
+
+    100%{
+        transform:translateX(0px);
+    }
+}
+
+.add3{
+    animation:fromLeft 3s;
+}
+
+@keyframes fromLeft{
+    0%{
+        transform:translateX(-190px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.add4{
+    animation:fromDown 3s;
+}
+
+@keyframes fromDown{
+    0%{
+        transform:translateY(190px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
 
 
 @media screen and (max-width:800px){
@@ -408,6 +463,15 @@ li{
         font-size: calc(1vw + 13px);
     }
     
+    .flechaDerecha{
+        visibility: visible;
+        display: none;
+    }
+    .flechaAbajo{
+        visibility: visible;
+        display: block;
+    }
+    
 
     /*   FONDO   ////////////////////////////////////////////////////////////////////*/
     
@@ -434,7 +498,7 @@ li{
 
     /* logo de dialogo */
 
-    .texto-dialogo{
+    .dialogo{
         position:absolute;
         top:-1.5cm;
         left:55%;
@@ -487,7 +551,7 @@ li{
     
     /* Logo de dialgo */
 
-    .texto-dialogo{
+    .dialogo{
         width:2.3cm;
         padding-right:0.3cm;
         padding-top:0.6cm;

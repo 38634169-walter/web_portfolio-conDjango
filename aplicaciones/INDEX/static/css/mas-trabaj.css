@@ -15,7 +15,7 @@ hr{
     background: linear-gradient(20deg, white 5% , rgba(2, 2, 124, 0.671) 30% 50%, transparent 70% 100%),url(../imagenes/mas-trabajos/wallpaper.jpg);
     border-radius:35px;
     box-shadow: 15px 10px 15px black;
-    z-index:2;
+    z-index:10;
 }
 .introduccion>div{
     height:100%;
@@ -48,6 +48,8 @@ hr{
     margin-bottom:-3.3cm;
     background:rgba(2, 2, 119, 0.849);
     border-top:2px solid white;
+    position:relative;
+    z-index:5;
 }
 
 
@@ -106,6 +108,10 @@ hr{
 }
 .webs>div>ul>a>img:hover{
     transform: scale(1.2);
+}
+
+.webs>div>ul:nth-child(3)>a{
+    width:75%;
 }
 
 /* TPS UTN */
@@ -223,6 +229,10 @@ hr{
     .webs>div>ul>a{
         width:90%;
     }
+    .webs>div>ul:nth-child(3)>a{
+        width:90%;
+    }
+
 }
 
 @media all and (max-width:400px){
