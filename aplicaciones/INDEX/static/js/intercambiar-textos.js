@@ -1,17 +1,18 @@
 $(document).ready(intercambiar_textos);
 
-var num = 1;
+var num3 = 1;
 
 function intercambiar_textos() {
 
     setInterval(function () {
-        if (num == 1) {
+        
+        if (num3 == 1) {
             $('.dialogo').html("Un gusto verte");
-            num = 0;
+            num3 = 0;
         }
         else {
             $('.dialogo').html("Saludos");
-            num = 1;
+            num3 = 1;
         }
 
     }, 2000);

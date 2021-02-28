@@ -5,16 +5,15 @@ let num2 = 1;
 
 function mostrar_menu(){
 
-
     $('.iconoMenu').click(mostrar);
 
     $('.xMenu').click(ocultar);
     $('section').click(ocultar);
     $('footer').click(ocultar);
 
-    /* sub menu */
 
     $('#liToggle').click(sub_menu);
+
 }
 
 function mostrar(){
@@ -24,12 +23,13 @@ function mostrar(){
 }
 
 function ocultar(){
-    $('.menu-principal').css({'top':'-190%'});
-    
+    if ($(window).width() <= 800){
+        $('.menu-principal').css({'top':'-190%'});
+    }
     $('.xMenu').css({'display':'none'});
     $('.iconoMenu').css({'display':'block'});
 
-    /* ocultar submenu y volver flechas */ 
+    
     if(num2 == 0){
         $('.sub-menu1').slideToggle();
 
