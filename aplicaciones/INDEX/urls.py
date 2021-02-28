@@ -11,5 +11,5 @@ urlpatterns = [
     #HTMLS
     path("mas-trabajos",Html.mas_trabajos,name="mas-trabajos"),
     path("contacto",Html.contacto,name="contacto"),
-    path("info",Html.info, name="info")
+    path("info",Html.info, name="info"),
 ]

@@ -10,9 +10,12 @@ function mostrar_menu(){
     $('.xMenu').click(ocultar);
     $('section').click(ocultar);
     $('footer').click(ocultar);
+    
+    $('.ubicacion-btn').click(ocultar);
 
-
-    $('#liToggle').click(sub_menu);
+    if ($(window).width() <= 800){
+        $('#liToggle').click(sub_menu);
+    }
 
 }
 
